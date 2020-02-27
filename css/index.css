@@ -1,43 +1,178 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}  
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 * {
     box-sizing: border-box;
 }
-  .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      padding: 10px;
-  }
-  .navbar {
+     
+  
+  .navigation {
       display: flex;
       flex-direction: row;
-      flex-flow: row;
       justify-content: space-between;
+      margin: 0 auto;
 
-      border: 2px solid blue;
-      width: 100%;
+      width: 70%;
   }
      .nav {
          display: flex;
-         text-align: center;
-         justify-content: space-between;
-         width: 60%;
+         
+         justify-content: space-around;
+         align-items: center;
+         width: 600px;
+         padding: 2%;
+         
      }
-  .header-text {
-      display: flex;
-  }
-  /* At 800px Do the following */
-   @media (max-width: 800px) {
-       .container {
-           width: 50%;
+     .nav a {
+        font-size: 20px;
+     }
 
+  .header-section {
+      display: flex;
+      justify-content: center;
+  }
+      .header-text {
+          align-items: flex-start;
+      } 
+      .header-text h1 {
+          font-size: 4em;
+          flex-wrap: wrap;
+          font-weight: bold;
+          margin: 4%;
+      }
+      .header-image {
+          margin: 15px;
+      }
+      button {
+          font-size: 2em;
+      }
+     .top-content {
+         display: flex;
+         flex-direction: row;
+        } 
+         
+        
+       
+     .top-content div {
+            align-items: center;
+            justify-content: space-evenly;
+             width: 48%;
+             padding: 2%;
+             margin: 2%;
+         
+         }
+         .top-content h3 {
+             font-size: 1.5em;
+         }
+           h3 {
+               font-size: 1.5em;
+               font-weight: bold;
+               margin: 2%;
+           }
+         .mid-page-image {
+             align-items: center;
+             margin: 2%;
+         }
+         .bottom-content {
+             display: flex;
+         }
+           .bottom-content div {
+               width: 33%;
+               margin: 2%;
+           }
+           .bottom-content h3 {
+               font-size: 1.5em;
+           }
+             address {
+                 margin: 2%;
+             }
+             footer {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+             }
+
+
+  /* At 800px Do the following */
+     @media (max-width: 800px;) {
+         * {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         
+       .navigation .logo {
+           display: flex;
+           flex-direction: column;
+           width: 50%;
+           order: -6;
        }
+           .header-image {
+               display: none;
+           }
    }
       /* At 500px Do the following */
       @media (max-width: 500px) {
-          .container {
-              width: 30%;
+          * {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
           }
+         .nav .logo {
+            width: 50%;
+            order: -6;
+        }
+             .header-image {
+                 display: none;
+             }
+
       }
 
