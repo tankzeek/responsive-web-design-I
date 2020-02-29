@@ -52,22 +52,32 @@ table {
 * {
     box-sizing: border-box;
 }
-     
+ html {
+     width: 960px;
+     margin: 0 auto;
+ }
   
   .navigation {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin: 0 auto;
+      padding: 2%;
 
-      width: 70%;
+     
   }
+    .navigation {
+        width: 80%;
+        
+        padding: 5%;
+
+    }
      .nav {
          display: flex;
          
          justify-content: space-around;
-         align-items: center;
-         width: 600px;
+         align-content: flex-start;
+         width: 500px;
          padding: 2%;
          
      }
@@ -77,20 +87,22 @@ table {
 
   .header-section {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      max-width: 760px;
+
   }
-      .header-text {
-          align-items: flex-start;
+      .header-item {
+          padding: 20px;
+          box-sizing: border-box;
+          flex-basis: 46%;
       } 
-      .header-text h1 {
+      .header-item h1 {
           font-size: 4em;
           flex-wrap: wrap;
           font-weight: bold;
           margin: 4%;
       }
-      .header-image {
-          margin: 15px;
-      }
+      
       button {
           font-size: 2em;
       }
@@ -109,9 +121,14 @@ table {
              margin: 2%;
          
          }
-         .top-content h3 {
-             font-size: 1.5em;
-         }
+         
+           .content-top {
+               flex-basis: 40%;
+               box-sizing: border-box;
+               margin: auto;
+           }
+
+
            h3 {
                font-size: 1.5em;
                font-weight: bold;
@@ -123,14 +140,16 @@ table {
          }
          .bottom-content {
              display: flex;
+             justify-content: space-between;
+             max-width: 960px;
+             margin: 0 auto;
          }
-           .bottom-content div {
-               width: 33%;
-               margin: 2%;
-           }
-           .bottom-content h3 {
-               font-size: 1.5em;
-           }
+             .content-bottom {
+                 box-sizing: border-box;
+                 flex-basis: 30%;
+                 padding: 20px;
+                 margin-bottom: 20px;
+             }
              address {
                  margin: 2%;
              }
@@ -142,37 +161,91 @@ table {
 
 
   /* At 800px Do the following */
-     @media (max-width: 800px;) {
-         * {
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-         }
+     @media (max-width: 800px) {
          
-       .navigation .logo {
-           display: flex;
-           flex-direction: column;
-           width: 50%;
-           order: -6;
-       }
-           .header-image {
-               display: none;
-           }
+         
+   .logo {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      order: -1;
    }
+     .header-image {
+         display: none;
+     }
+     
+     header {
+      flex-flow: column wrap;
+    }
+      .mid-page-image {
+          max-width: 100%;
+      }
+      
+     header .nav {
+         display: flex;
+         width: 750px; 
+         justify-content: space-between;
+         
+     }
+   }
+
       /* At 500px Do the following */
       @media (max-width: 500px) {
-          * {
+          html {
+              display: flex;
+              
+              flex-flow: column wrap;
+              align-content: flex-start;
+              align-items: center;
+              margin: 0;
+          }
+          .logo {
+            width: 50%;
+            order: -1;
+            flex-flow: column nowrap;
+            
+        }
+        .top-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+           }
+
+
+        .mid-page-image {
+            max-width: 100%;
+        }
+          .bottom-content {
               display: flex;
               flex-direction: column;
               align-items: center;
+              margin: 0 auto;
           }
-         .nav .logo {
-            width: 50%;
-            order: -6;
-        }
-             .header-image {
-                 display: none;
-             }
 
-      }
+
+           .logo {
+               display: flex;
+               
+               justify-content: center;
+               align-items: center;
+               margin: 0 auto;
+              
+           }
+            .nav {
+            display: flex;
+            flex-direction: column;
+             width: 480px;
+             margin: 0 auto;
+             justify-content: center;
+            align-items: center;
+            font-size: 1.2em
+        }
+
+
+     .header-image {
+         display: none;
+     }
+
+}
 
