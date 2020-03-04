@@ -52,10 +52,17 @@ table {
 * {
     box-sizing: border-box;
 }
- html {
-     width: 960px;
-     margin: 0 auto;
- }
+    /*  Begin styling */
+
+    #wrapper {
+        max-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    
   
   .navigation {
       display: flex;
@@ -81,6 +88,9 @@ table {
          padding: 2%;
          
      }
+       .logo {
+         flex-basis: 30%
+       }
      .nav a {
         font-size: 20px;
      }
@@ -193,7 +203,7 @@ table {
       @media (max-width: 500px) {
           html {
               display: flex;
-              
+              flex-direction: column;
               flex-flow: column wrap;
               align-content: flex-start;
               align-items: center;
