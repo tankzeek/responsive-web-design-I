@@ -205,7 +205,7 @@ table {
               display: flex;
               flex-direction: column;
               flex-flow: column wrap;
-              align-content: flex-start;
+              align-content: center;
               align-items: center;
               margin: 0;
           }
